@@ -1,6 +1,7 @@
 #!/bin/bash
 
 rand=$((RANDOM))
+date=`date -R`
 
-echo "Subject: test $rand" | sendmail -f foo@falco.bz -S $1:25 $2
+echo "Subject: test $rand $date" | sendmail -f $2 -S $1:25 $3
 
